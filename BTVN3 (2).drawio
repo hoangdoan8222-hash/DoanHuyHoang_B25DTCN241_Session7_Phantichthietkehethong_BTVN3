@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-09-17T00:00:00.000Z" agent="ChatGPT" version="24.7.17">
+  <diagram id="quickbite-class" name="QuickBite Class Diagram">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Customer -->
+        <mxCell id="customer" value="&lt;b&gt;Customer&lt;/b&gt;&lt;hr/&gt;- customerId: int&lt;br/&gt;- name: String&lt;br/&gt;- email: String&lt;br/&gt;- phone: String&lt;br/&gt;- address: String&lt;hr/&gt;+ getCustomerId(): int&lt;br/&gt;+ getName(): String&lt;br/&gt;+ getEmail(): String&lt;br/&gt;+ updateProfile(): void&lt;br/&gt;+ createOrder(): Order" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=6;spacingLeft=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="100" width="250" height="260" as="geometry"/>
+        </mxCell>
+
+        <!-- Employee -->
+        <mxCell id="employee" value="&lt;b&gt;Employee&lt;/b&gt;&lt;hr/&gt;- employeeId: int&lt;br/&gt;- fullName: String&lt;br/&gt;- phone: String&lt;br/&gt;- email: String&lt;br/&gt;- salary: Decimal&lt;hr/&gt;+ getEmployeeId(): int&lt;br/&gt;+ getFullName(): String&lt;br/&gt;+ getPhone(): String&lt;br/&gt;+ updateProfile(): void&lt;br/&gt;+ calculateSalary(): Decimal" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=6;spacingLeft=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="500" width="250" height="260" as="geometry"/>
+        </mxCell>
+
+        <!-- Category -->
+        <mxCell id="category" value="&lt;b&gt;Category&lt;/b&gt;&lt;hr/&gt;- categoryId: int&lt;br/&gt;- categoryName: String&lt;br/&gt;- description: String&lt;hr/&gt;+ addMenuItem(): void&lt;br/&gt;+ removeMenuItem(): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=6;spacingLeft=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="390" y="60" width="250" height="190" as="geometry"/>
+        </mxCell>
+
+        <!-- MenuItem -->
+        <mxCell id="menuitem" value="&lt;b&gt;MenuItem&lt;/b&gt;&lt;hr/&gt;- itemId: int&lt;br/&gt;- itemName: String&lt;br/&gt;- price: Decimal&lt;br/&gt;- stockQuantity: int&lt;br/&gt;- description: String&lt;hr/&gt;+ getItemId(): int&lt;br/&gt;+ getItemName(): String&lt;br/&gt;+ getPrice(): Decimal&lt;br/&gt;+ checkStock(quantity: int): bool&lt;br/&gt;+ updateStock(quantity: int): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=6;spacingLeft=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="390" y="350" width="250" height="250" as="geometry"/>
+        </mxCell>
+
+        <!-- Voucher -->
+        <mxCell id="voucher" value="&lt;b&gt;Voucher&lt;/b&gt;&lt;hr/&gt;- voucherCode: String&lt;br/&gt;- discountValue: Decimal&lt;br/&gt;- expiryDate: Date&lt;hr/&gt;+ isValid(): bool&lt;br/&gt;+ calculateDiscount(): Decimal" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=6;spacingLeft=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="390" y="700" width="250" height="190" as="geometry"/>
+        </mxCell>
+
+        <!-- Order -->
+        <mxCell id="order" value="&lt;b&gt;Order&lt;/b&gt;&lt;hr/&gt;- orderId: int&lt;br/&gt;- orderDate: DateTime&lt;br/&gt;- status: String&lt;br/&gt;- totalAmount: Decimal&lt;hr/&gt;+ addItem(item: OrderItem): void&lt;br/&gt;+ removeItem(itemId: int): void&lt;br/&gt;+ calculateTotal(): Decimal&lt;br/&gt;+ placeOrder(): void&lt;br/&gt;+ cancel(): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=6;spacingLeft=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="730" y="260" width="270" height="260" as="geometry"/>
+        </mxCell>
+
+        <!-- Shipper -->
+        <mxCell id="shipper" value="&lt;b&gt;Shipper&lt;/b&gt;&lt;hr/&gt;- vehicleType: String&lt;br/&gt;- deliveryStatus: String&lt;hr/&gt;+ acceptDelivery(): void&lt;br/&gt;+ updateDeliveryStatus(): void&lt;br/&gt;+ completeDelivery(): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=6;spacingLeft=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="730" y="650" width="270" height="210" as="geometry"/>
+        </mxCell>
+
+        <!-- OrderItem -->
+        <mxCell id="orderitem" value="&lt;b&gt;OrderItem&lt;/b&gt;&lt;hr/&gt;- orderItemId: int&lt;br/&gt;- quantity: int&lt;br/&gt;- unitPrice: Decimal&lt;br/&gt;- subtotal: Decimal&lt;hr/&gt;+ calculateSubtotal(): Decimal&lt;br/&gt;+ updateQuantity(quantity: int): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=6;spacingLeft=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="260" width="270" height="220" as="geometry"/>
+        </mxCell>
+
+        <!-- Payment -->
+        <mxCell id="payment" value="&lt;b&gt;Payment&lt;/b&gt;&lt;hr/&gt;- paymentId: int&lt;br/&gt;- amount: Decimal&lt;br/&gt;- method: String&lt;br/&gt;- status: String&lt;hr/&gt;+ processPayment(): void&lt;br/&gt;+ verifyPayment(): bool&lt;br/&gt;+ refund(): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=6;spacingLeft=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="550" width="270" height="220" as="geometry"/>
+        </mxCell>
+
+        <!-- Receipt -->
+        <mxCell id="receipt" value="&lt;b&gt;Receipt&lt;/b&gt;&lt;hr/&gt;- receiptId: int&lt;br/&gt;- receiptNumber: String&lt;br/&gt;- issuedDate: DateTime&lt;hr/&gt;+ generateReceipt(): void&lt;br/&gt;+ sendReceipt(): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=6;spacingLeft=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1430" y="550" width="270" height="190" as="geometry"/>
+        </mxCell>
+
+        <!-- Aggregation Category -> MenuItem -->
+        <mxCell id="e_category_menu" value="0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=diamondThin;startFill=0;" edge="1" parent="1" source="category" target="menuitem">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="label_category_menu" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="e_category_menu">
+          <mxGeometry x="-0.1" y="-0.05" relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Customer -> Order -->
+        <mxCell id="e_customer_order" value="0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;" edge="1" parent="1" source="customer" target="order">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="label_customer_order" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="e_customer_order">
+          <mxGeometry x="-0.1" y="-0.05" relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Composition Order -> OrderItem -->
+        <mxCell id="e_order_item" value="1..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=diamond;startFill=1;" edge="1" parent="1" source="order" target="orderitem">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="label_order_item" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="e_order_item">
+          <mxGeometry x="-0.1" y="-0.05" relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- OrderItem -> MenuItem -->
+        <mxCell id="e_item_menu" value="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;" edge="1" parent="1" source="orderitem" target="menuitem">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="label_item_menu" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="e_item_menu">
+          <mxGeometry x="-0.1" y="-0.05" relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Order -> Voucher -->
+        <mxCell id="e_order_voucher" value="0..1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;" edge="1" parent="1" source="order" target="voucher">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="label_order_voucher" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="e_order_voucher">
+          <mxGeometry x="-0.1" y="-0.05" relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Generalization Employee <- Shipper -->
+        <mxCell id="e_employee_shipper" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;" edge="1" parent="1" source="shipper" target="employee">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Order -> Payment -->
+        <mxCell id="e_order_payment" value="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;" edge="1" parent="1" source="order" target="payment">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="label_order_payment" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="e_order_payment">
+          <mxGeometry x="-0.1" y="-0.05" relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Payment -> Receipt -->
+        <mxCell id="e_payment_receipt" value="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;" edge="1" parent="1" source="payment" target="receipt">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="label_payment_receipt" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="e_payment_receipt">
+          <mxGeometry x="-0.1" y="-0.05" relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Title -->
+        <mxCell id="title" value="&lt;b&gt;QUICKBITE – CLASS DIAGRAM TỔNG THỂ&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="500" y="10" width="800" height="40" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
